@@ -1,0 +1,784 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Abhishek &amp; Deshna · 10 Feb 2027</title>
+<meta name="description" content="Abhishek Shah weds Deshna (Diya) Shah — 9 &amp; 10 February 2027.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="logo.jpg">
+<style>
+/* ============================================================
+   PALETTE — pulled from the applique logo
+   ============================================================ */
+:root{
+  --cream:#F6EDE2;
+  --cream-deep:#F1E4DB;
+  --cream-card:#FBF5EC;
+  --brick:#9E3B21;
+  --brick-soft:#B8563A;
+  --marigold:#E39A12;
+  --marigold-soft:#F0BC5B;
+  --olive:#5B6B3A;
+  --ink:#3E2A20;
+  --ink-soft:#6B5244;
+  --line:rgba(158,59,33,.18);
+  --shadow:0 18px 40px -22px rgba(62,42,32,.55);
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,"Times New Roman",serif;
+  --sans:ui-rounded,"SF Pro Rounded","Avenir Next",Avenir,"Segoe UI",system-ui,sans-serif;
+  color-scheme:light only;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; background:var(--cream); color:var(--ink);
+  font-family:var(--sans); font-size:16px; line-height:1.65;
+  -webkit-font-smoothing:antialiased; overflow-x:hidden;
+}
+img{max-width:100%; display:block}
+[hidden]{display:none!important}
+::selection{background:var(--marigold-soft); color:var(--ink)}
+
+/* Woven-linen grain, drawn inline so nothing is ever fetched */
+body::before{
+  content:""; position:fixed; inset:0; pointer-events:none; z-index:60; opacity:.5;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.22'/%3E%3C/svg%3E");
+  mix-blend-mode:multiply;
+}
+
+/* ============================================================
+   TYPE
+   ============================================================ */
+h1,h2,h3{font-family:var(--serif); font-weight:600; letter-spacing:.005em; margin:0}
+.eyebrow{
+  font-family:var(--sans); font-size:.72rem; letter-spacing:.34em; text-transform:uppercase;
+  color:var(--brick-soft); font-weight:600; margin:0 0 .9rem;
+}
+.script{font-family:var(--serif); font-style:italic; color:var(--brick)}
+p{margin:0 0 1rem}
+
+/* ============================================================
+   LAYOUT
+   ============================================================ */
+.wrap{width:min(1080px,100% - 2.5rem); margin-inline:auto}
+section{position:relative; padding-block:clamp(3.5rem,8vw,6.5rem)}
+.center{text-align:center}
+.lede{max-width:46ch; margin-inline:auto; color:var(--ink-soft)}
+
+/* ============================================================
+   NAV
+   ============================================================ */
+nav{
+  position:sticky; top:0; z-index:50; backdrop-filter:blur(10px);
+  background:rgba(246,237,226,.82); border-bottom:1px solid transparent;
+  transition:border-color .3s, box-shadow .3s;
+  padding-top:env(safe-area-inset-top,0px);
+}
+nav.stuck{border-bottom-color:var(--line); box-shadow:0 6px 24px -20px rgba(62,42,32,.8)}
+.nav-in{display:flex; align-items:center; justify-content:center; gap:clamp(.6rem,2.4vw,2rem); padding:.7rem 1rem; flex-wrap:wrap}
+nav a{
+  font-size:.74rem; letter-spacing:.18em; text-transform:uppercase; text-decoration:none;
+  color:var(--ink-soft); font-weight:600; padding:.3rem .1rem; white-space:nowrap;
+  border-bottom:1.5px solid transparent; transition:color .25s, border-color .25s;
+}
+nav a:hover,nav a:focus-visible{color:var(--brick); border-bottom-color:var(--marigold)}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero{padding-top:clamp(1.5rem,4vw,3rem); padding-bottom:clamp(2rem,6vw,4rem); overflow:hidden}
+.garland{width:100%; max-width:760px; margin:0 auto clamp(.5rem,3vw,1.5rem); display:block}
+.logo-stage{position:relative; width:min(540px,86vw); margin:0 auto; isolation:isolate}
+.logo-stage img{
+  width:100%; border-radius:28px;
+  filter:drop-shadow(0 26px 40px rgba(62,42,32,.22));
+  animation:floaty 7s ease-in-out infinite;
+}
+@keyframes floaty{0%,100%{transform:translateY(0) rotate(-.4deg)}50%{transform:translateY(-12px) rotate(.4deg)}}
+.names{margin-top:clamp(1.6rem,4vw,2.6rem)}
+.names h1{
+  font-size:clamp(2.3rem,8.2vw,4.6rem); line-height:1.04; color:var(--brick);
+}
+.names h1 .amp{display:block; font-size:.42em; color:var(--marigold); font-style:italic; margin:.15em 0}
+.tagline{margin-top:1rem; font-size:clamp(.95rem,2.4vw,1.1rem); color:var(--ink-soft); font-style:italic; font-family:var(--serif)}
+.date-rail{
+  margin:clamp(1.4rem,4vw,2rem) auto 0; display:inline-flex; align-items:center; gap:clamp(.7rem,3vw,1.4rem);
+  font-family:var(--serif); font-size:clamp(1rem,3.4vw,1.5rem); color:var(--ink); letter-spacing:.06em;
+}
+.date-rail span{white-space:nowrap}
+.date-rail .dot{width:7px; height:7px; border-radius:50%; background:var(--marigold); flex:none}
+.scroll-cue{margin-top:clamp(2rem,5vw,3rem); font-size:.7rem; letter-spacing:.3em; text-transform:uppercase; color:var(--ink-soft)}
+.scroll-cue i{display:block; width:1px; height:44px; margin:.7rem auto 0; background:linear-gradient(var(--marigold),transparent); animation:drop 2.2s ease-in-out infinite}
+@keyframes drop{0%,100%{opacity:.25; transform:scaleY(.6)}50%{opacity:1; transform:scaleY(1)}}
+
+/* twinkling four-point stars from the logo */
+.spark{position:absolute; pointer-events:none; color:var(--marigold); animation:tw 3.4s ease-in-out infinite}
+@keyframes tw{0%,100%{opacity:.25; transform:scale(.7) rotate(0)}50%{opacity:1; transform:scale(1.05) rotate(18deg)}}
+
+/* ============================================================
+   COUNTDOWN
+   ============================================================ */
+.count{display:flex; justify-content:center; gap:clamp(.5rem,2.4vw,1.4rem); flex-wrap:wrap; margin-top:1.8rem}
+.count div{
+  min-width:clamp(68px,18vw,104px); padding:1rem .6rem; border-radius:20px;
+  background:var(--cream-card); border:1px solid var(--line); box-shadow:var(--shadow);
+}
+.count b{display:block; font-family:var(--serif); font-size:clamp(1.5rem,5.4vw,2.4rem); color:var(--brick); line-height:1}
+.count small{display:block; margin-top:.4rem; font-size:.62rem; letter-spacing:.22em; text-transform:uppercase; color:var(--ink-soft)}
+
+/* ============================================================
+   BLOB CARDS / SHARED
+   ============================================================ */
+.blob{
+  background:var(--cream-card); border:1px solid var(--line); box-shadow:var(--shadow);
+  border-radius:46% 54% 52% 48%/48% 46% 54% 52%;
+  padding:clamp(1.6rem,4.5vw,2.8rem);
+}
+.card{
+  background:var(--cream-card); border:1px solid var(--line); border-radius:24px;
+  padding:clamp(1.3rem,3.6vw,2rem); box-shadow:var(--shadow); position:relative; overflow:hidden;
+}
+.card::after{
+  content:""; position:absolute; right:-40px; top:-40px; width:120px; height:120px; border-radius:50%;
+  background:radial-gradient(circle at 30% 30%,rgba(227,154,18,.22),transparent 70%);
+}
+.btn{
+  display:inline-flex; align-items:center; gap:.5rem; text-decoration:none; cursor:pointer;
+  font-family:var(--sans); font-size:.78rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase;
+  padding:.72rem 1.15rem; border-radius:999px; border:1.5px solid var(--brick); color:var(--brick);
+  background:transparent; transition:background .25s, color .25s, transform .2s;
+}
+.btn:hover,.btn:focus-visible{background:var(--brick); color:var(--cream); transform:translateY(-2px)}
+.btn.solid{background:var(--brick); color:var(--cream)}
+.btn.solid:hover{background:var(--brick-soft); border-color:var(--brick-soft)}
+.btn.ghost{border-color:var(--olive); color:var(--olive)}
+.btn.ghost:hover{background:var(--olive); color:var(--cream)}
+
+/* ============================================================
+   STORY
+   ============================================================ */
+.story{display:grid; gap:clamp(1rem,3vw,1.6rem); margin-top:2.6rem}
+@media(min-width:760px){.story{grid-template-columns:repeat(2,1fr)}}
+.beat{display:flex; gap:1rem; align-items:flex-start}
+.beat .yr{
+  flex:none; width:58px; height:58px; border-radius:50%; display:grid; place-items:center;
+  background:var(--marigold); color:#fff; font-family:var(--serif); font-size:.92rem; font-weight:700;
+  box-shadow:0 10px 20px -10px rgba(227,154,18,.9);
+}
+.beat h3{font-size:1.1rem; color:var(--brick); margin-bottom:.2rem}
+.beat p{font-size:.94rem; color:var(--ink-soft); margin:0}
+
+/* ============================================================
+   EVENTS
+   ============================================================ */
+.day{margin-top:clamp(2rem,5vw,3.2rem)}
+.day-head{display:flex; align-items:baseline; gap:.9rem; flex-wrap:wrap; padding-bottom:.9rem; border-bottom:1px dashed var(--line)}
+.day-head h3{font-size:clamp(1.3rem,4vw,1.8rem); color:var(--brick)}
+.day-head span{font-size:.74rem; letter-spacing:.2em; text-transform:uppercase; color:var(--ink-soft); font-weight:600}
+.events{display:grid; gap:clamp(.9rem,2.6vw,1.3rem); margin-top:1.4rem}
+@media(min-width:720px){.events{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}}
+.ev-time{font-family:var(--serif); font-size:1.5rem; color:var(--marigold); line-height:1}
+.ev h3{font-size:1.25rem; margin:.45rem 0 .35rem; color:var(--brick)}
+.ev .meta{font-size:.78rem; letter-spacing:.1em; text-transform:uppercase; color:var(--olive); font-weight:700; margin-bottom:.7rem}
+.ev p{font-size:.93rem; color:var(--ink-soft); margin-bottom:1.1rem}
+.ev .acts{display:flex; gap:.55rem; flex-wrap:wrap}
+.ev .acts .btn{font-size:.68rem; padding:.55rem .9rem}
+
+/* ============================================================
+   VENUES
+   ============================================================ */
+.venues{display:grid; gap:clamp(1rem,3vw,1.8rem); margin-top:2.4rem}
+@media(min-width:780px){.venues{grid-template-columns:1fr 1fr}}
+.venue{text-align:center}
+.venue .pin{width:46px; height:46px; margin:0 auto .9rem; color:var(--brick)}
+.venue h3{font-size:1.3rem; color:var(--brick); margin-bottom:.3rem}
+.venue .addr{font-size:.92rem; color:var(--ink-soft); margin-bottom:1.2rem}
+.venue .hosts{font-size:.74rem; letter-spacing:.18em; text-transform:uppercase; color:var(--olive); font-weight:700; margin-bottom:.9rem}
+
+/* ============================================================
+   GALLERY (placeholders — swap in real photographs)
+   ============================================================ */
+.gal{display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:.8rem; margin-top:2.2rem}
+.tile{
+  aspect-ratio:3/4; border-radius:20px; display:grid; place-items:center; position:relative; overflow:hidden;
+  border:1px solid var(--line); color:rgba(62,42,32,.45); font-size:.68rem; letter-spacing:.2em; text-transform:uppercase;
+}
+.tile:nth-child(3n+1){background:linear-gradient(160deg,#F3E3CB,#EBD3B4)}
+.tile:nth-child(3n+2){background:linear-gradient(160deg,#F1DFD7,#E3C3B6)}
+.tile:nth-child(3n+3){background:linear-gradient(160deg,#E7E7D4,#D3D8B8)}
+.tile:nth-child(even){aspect-ratio:1/1}
+.tile svg{position:absolute; inset:0; margin:auto; width:54%; opacity:.28}
+
+/* ============================================================
+   RSVP
+   ============================================================ */
+form{margin-top:2rem; display:grid; gap:1rem; text-align:left}
+@media(min-width:680px){.row2{display:grid; grid-template-columns:1fr 1fr; gap:1rem}}
+label{display:block; font-size:.7rem; letter-spacing:.2em; text-transform:uppercase; font-weight:700; color:var(--ink-soft); margin-bottom:.45rem}
+input,select,textarea{
+  width:100%; font:inherit; font-size:.95rem; color:var(--ink); padding:.8rem .95rem;
+  background:var(--cream); border:1.5px solid var(--line); border-radius:14px; transition:border-color .2s, box-shadow .2s;
+}
+input:focus,select:focus,textarea:focus{outline:none; border-color:var(--marigold); box-shadow:0 0 0 4px rgba(227,154,18,.16)}
+textarea{min-height:96px; resize:vertical}
+fieldset{border:0; padding:0; margin:0}
+.chips{display:flex; gap:.5rem; flex-wrap:wrap}
+.chips label{
+  margin:0; padding:.55rem .95rem; border-radius:999px; border:1.5px solid var(--line); cursor:pointer;
+  font-size:.72rem; letter-spacing:.12em; color:var(--ink-soft); background:var(--cream); transition:all .2s;
+}
+.chips input{position:absolute; opacity:0; width:0; height:0}
+.chips input:checked + span{color:var(--cream)}
+.chips label:has(input:checked){background:var(--brick); border-color:var(--brick); color:var(--cream)}
+.form-note{font-size:.78rem; color:var(--ink-soft); margin:0}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer{
+  padding-block:clamp(3rem,7vw,5rem) calc(clamp(2rem,5vw,3rem) + env(safe-area-inset-bottom,0px));
+  text-align:center; border-top:1px solid var(--line); background:var(--cream-deep);
+}
+.hash{font-family:var(--serif); font-size:clamp(1.4rem,5vw,2.2rem); color:var(--brick); margin:.6rem 0}
+.fine{font-size:.74rem; color:var(--ink-soft); letter-spacing:.1em}
+
+/* ============================================================
+   SCRATCH CARD — three marigold coins hiding the date
+   ============================================================ */
+.scratch-row{display:flex; justify-content:center; gap:clamp(.8rem,3.5vw,1.8rem); flex-wrap:wrap; margin-top:2rem}
+.coin{
+  position:relative; width:clamp(96px,26vw,150px); aspect-ratio:1; border-radius:50%; overflow:hidden;
+  display:grid; place-items:center; background:var(--cream-card); border:1px solid var(--line); box-shadow:var(--shadow);
+  user-select:none; -webkit-user-select:none; -webkit-touch-callout:none;
+}
+.coin b{display:block; font-family:var(--serif); font-size:clamp(1.7rem,7vw,2.7rem); color:var(--brick); line-height:1}
+.coin small{display:block; margin-top:.35rem; font-size:.58rem; letter-spacing:.22em; text-transform:uppercase; color:var(--ink-soft)}
+.coin canvas{position:absolute; inset:0; width:100%; height:100%; touch-action:none; cursor:grab; transition:opacity .7s ease}
+.coin canvas:active{cursor:grabbing}
+.coin.done canvas{opacity:0; pointer-events:none}
+.coin.done{animation:coinpop .6s cubic-bezier(.2,.7,.3,1.4)}
+@keyframes coinpop{0%{transform:scale(1)}40%{transform:scale(1.08)}100%{transform:scale(1)}}
+.scratch-msg{margin:1.8rem auto 0; font-family:var(--serif); font-size:clamp(1.1rem,3.6vw,1.4rem); color:var(--ink); opacity:0; transform:translateY(10px); transition:opacity .8s, transform .8s}
+.scratch-msg.show{opacity:1; transform:none}
+.scratch-skip{margin-top:1.2rem; background:none; border:0; font:inherit; font-size:.72rem; letter-spacing:.18em; text-transform:uppercase; color:var(--ink-soft); text-decoration:underline; text-underline-offset:4px; cursor:pointer}
+.scratch-skip:hover,.scratch-skip:focus-visible{color:var(--brick)}
+
+/* ============================================================
+   PETALS + REVEAL
+   ============================================================ */
+.petal{position:fixed; top:-40px; pointer-events:none; z-index:1; opacity:0; animation:fall linear forwards}
+@keyframes fall{
+  0%{opacity:0; transform:translateY(-10vh) rotate(0)}
+  10%{opacity:.75}
+  100%{opacity:0; transform:translateY(108vh) rotate(420deg)}
+}
+.reveal{opacity:0; transform:translateY(26px); transition:opacity .8s ease, transform .8s cubic-bezier(.2,.7,.3,1)}
+.reveal.in{opacity:1; transform:none}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important; transition:none!important}
+  .reveal{opacity:1; transform:none}
+  html{scroll-behavior:auto}
+}
+@media print{nav,.scroll-cue,.petal,form,.btn,.coin canvas,.scratch-skip{display:none!important} .scratch-msg{opacity:1}}
+</style>
+</head>
+<body>
+<!-- ================================================================
+     PLACEHOLDERS TO REPLACE (everything else is final):
+       • Venue names + street addresses  → search "SAMPLE"
+       • Our Story beats, dress codes, travel/stay, gift note
+       • RSVP phone number + email       → search "SAMPLE-CONTACT"
+       • Gallery tiles                   → drop real photos into /photos
+     Map links, names, dates and timings are the real ones you gave.
+     ================================================================ -->
+
+<nav id="nav">
+  <div class="nav-in">
+    <a href="#story">Our Story</a>
+    <a href="#events">Events</a>
+    <a href="#venues">Venues</a>
+    <a href="#gallery">Moments</a>
+    <a href="#travel">Travel</a>
+    <a href="#rsvp">RSVP</a>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<header class="hero center">
+  <div class="wrap">
+    <svg class="garland" viewBox="0 0 760 66" aria-hidden="true">
+      <path d="M8 14 C 150 62, 230 62, 380 22 C 530 62, 610 62, 752 14" fill="none" stroke="#5B6B3A" stroke-width="2" stroke-linecap="round" opacity=".55"/>
+      <g id="buds"></g>
+    </svg>
+
+    <div class="logo-stage">
+      <img src="logo.jpg" alt="Monogram of A and D joined by an infinity ribbon, with the date 10 Feb 2027">
+      <svg class="spark" style="top:-14px;right:2%;width:30px;animation-delay:.2s" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 0c1.1 6.2 5.7 10.8 12 12-6.3 1.2-10.9 5.8-12 12-1.1-6.2-5.7-10.8-12-12C6.3 10.8 10.9 6.2 12 0z"/></svg>
+      <svg class="spark" style="bottom:6%;left:-10px;width:20px;animation-delay:1.3s" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 0c1.1 6.2 5.7 10.8 12 12-6.3 1.2-10.9 5.8-12 12-1.1-6.2-5.7-10.8-12-12C6.3 10.8 10.9 6.2 12 0z"/></svg>
+      <svg class="spark" style="top:34%;right:-16px;width:16px;animation-delay:2.1s" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 0c1.1 6.2 5.7 10.8 12 12-6.3 1.2-10.9 5.8-12 12-1.1-6.2-5.7-10.8-12-12C6.3 10.8 10.9 6.2 12 0z"/></svg>
+    </div>
+
+    <div class="names reveal">
+      <h1>Abhishek<span class="amp">&amp;</span>Deshna</h1>
+      <p class="tagline">Two letters, one infinity — and a very long guest list of people we love.</p>
+      <div class="date-rail">
+        <span>Tue 9 Feb</span><i class="dot"></i><span>Wed 10 Feb</span><i class="dot"></i><span>2027</span>
+      </div>
+    </div>
+
+    <div class="scroll-cue reveal">Scroll<i></i></div>
+  </div>
+</header>
+
+<!-- ================= SCRATCH CARD ================= -->
+<section id="scratch" class="center">
+  <div class="wrap reveal">
+    <p class="eyebrow">A little secret</p>
+    <h2 style="font-size:clamp(1.5rem,4.6vw,2.2rem);color:var(--brick)">Scratch to reveal the big day</h2>
+    <p class="lede">Rub each marigold coin with your finger or mouse.</p>
+    <div class="scratch-row">
+      <div class="coin"><div><b>10</b><small>Wednesday</small></div><canvas aria-hidden="true"></canvas></div>
+      <div class="coin"><div><b>Feb</b><small>February</small></div><canvas aria-hidden="true"></canvas></div>
+      <div class="coin"><div><b>2027</b><small>Save it</small></div><canvas aria-hidden="true"></canvas></div>
+    </div>
+    <p class="scratch-msg" id="scratch-msg" aria-live="polite"><span class="script">Save the date</span> — the phera is at 6:00 PM, and we want you there.</p>
+    <button type="button" class="scratch-skip" id="scratch-skip">Or just reveal it</button>
+  </div>
+</section>
+
+<!-- ================= COUNTDOWN ================= -->
+<section id="countdown" class="center">
+  <div class="wrap reveal">
+    <p class="eyebrow">The wedding muhurat</p>
+    <h2 style="font-size:clamp(1.5rem,4.6vw,2.2rem);color:var(--brick)">Counting down to the phera</h2>
+    <div class="count" id="clock">
+      <div><b data-k="d">—</b><small>Days</small></div>
+      <div><b data-k="h">—</b><small>Hours</small></div>
+      <div><b data-k="m">—</b><small>Minutes</small></div>
+      <div><b data-k="s">—</b><small>Seconds</small></div>
+    </div>
+    <p class="lede" style="margin-top:1.6rem">10 February 2027 · 6:00 PM · the moment the <span class="script">A</span> and the <span class="script">D</span> stop being two names.</p>
+  </div>
+</section>
+
+<!-- ================= STORY ================= -->
+<section id="story">
+  <div class="wrap">
+    <div class="center reveal">
+      <p class="eyebrow">How we got here</p>
+      <h2 style="font-size:clamp(1.7rem,5vw,2.6rem);color:var(--brick)">Our Story</h2>
+      <p class="lede">SAMPLE — swap these four beats for your own. Keep them short; the good version of this story gets told at the sangeet anyway.</p>
+    </div>
+    <div class="story">
+      <div class="card beat reveal"><div class="yr">2019</div><div><h3>A Wednesday, a wrong table</h3><p>SAMPLE — He was waiting for a friend who never showed. She was at the wrong table entirely. Neither of them left.</p></div></div>
+      <div class="card beat reveal"><div class="yr">2021</div><div><h3>Long distance, longer calls</h3><p>SAMPLE — Two cities, one shared playlist, and a standing 11 PM phone call that outlasted three phones.</p></div></div>
+      <div class="card beat reveal"><div class="yr">2024</div><div><h3>The families meet</h3><p>SAMPLE — Chai was poured, horoscopes were consulted, and somewhere between the dhoklas it stopped being a question.</p></div></div>
+      <div class="card beat reveal"><div class="yr">2026</div><div><h3>He asked. She'd already decided.</h3><p>SAMPLE — A terrace, a borrowed ring, and a yes that arrived before the sentence finished.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EVENTS ================= -->
+<section id="events">
+  <div class="wrap">
+    <div class="center reveal">
+      <p class="eyebrow">Save these slots</p>
+      <h2 style="font-size:clamp(1.7rem,5vw,2.6rem);color:var(--brick)">The Celebrations</h2>
+      <p class="lede">Five functions, two days, one very committed dhol player. Tap any card for directions or to drop it straight into your calendar.</p>
+    </div>
+
+    <div class="day">
+      <div class="day-head reveal"><h3>Day One</h3><span>Tuesday · 9 February 2027 · Venue One</span></div>
+      <div class="events">
+        <article class="card ev reveal" data-ev="Carnival" data-start="20270209T110000" data-end="20270209T150000" data-venue="A">
+          <div class="ev-time">11:00 AM</div>
+          <h3>Carnival</h3>
+          <div class="meta">Dress code · SAMPLE: bright summer festive</div>
+          <p>SAMPLE — Giant wheel energy in broad daylight. Food carts, a photo booth, and games rigged mildly in the couple's favour.</p>
+          <div class="acts">
+            <a class="btn" href="https://maps.app.goo.gl/otSrFEb36HX3Z8z1A" target="_blank" rel="noopener">Directions</a>
+            <button class="btn ghost" data-cal>Add to calendar</button>
+          </div>
+        </article>
+        <article class="card ev reveal" data-ev="Sangeet" data-start="20270209T170000" data-end="20270209T230000" data-venue="A">
+          <div class="ev-time">5:00 PM</div>
+          <h3>Sangeet</h3>
+          <div class="meta">Dress code · SAMPLE: indo-western glam</div>
+          <p>SAMPLE — Both families have been rehearsing in secret for months. Come early; the cousins peak first.</p>
+          <div class="acts">
+            <a class="btn" href="https://maps.app.goo.gl/otSrFEb36HX3Z8z1A" target="_blank" rel="noopener">Directions</a>
+            <button class="btn ghost" data-cal>Add to calendar</button>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="day-head reveal"><h3>Day Two</h3><span>Wednesday · 10 February 2027 · Venue Two</span></div>
+      <div class="events">
+        <article class="card ev reveal" data-ev="Mayra" data-start="20270210T100000" data-end="20270210T130000" data-venue="B">
+          <div class="ev-time">10:00 AM</div>
+          <h3>Mayra</h3>
+          <div class="meta">Dress code · SAMPLE: traditional ivory &amp; gold</div>
+          <p>SAMPLE — The mosal arrives. Expect blessings, gifts, and at least one relative who cries on cue.</p>
+          <div class="acts">
+            <a class="btn" href="https://maps.app.goo.gl/m8nVF2Wo9VPgv9Qs6" target="_blank" rel="noopener">Directions</a>
+            <button class="btn ghost" data-cal>Add to calendar</button>
+          </div>
+        </article>
+        <article class="card ev reveal" data-ev="Baraat" data-start="20270210T160000" data-end="20270210T180000" data-venue="B">
+          <div class="ev-time">4:00 PM</div>
+          <h3>Baraat</h3>
+          <div class="meta">Dress code · SAMPLE: sherwani &amp; saree brights</div>
+          <p>SAMPLE — The groom, a horse, and a street's worth of people dancing badly on purpose. Comfortable shoes recommended.</p>
+          <div class="acts">
+            <a class="btn" href="https://maps.app.goo.gl/m8nVF2Wo9VPgv9Qs6" target="_blank" rel="noopener">Directions</a>
+            <button class="btn ghost" data-cal>Add to calendar</button>
+          </div>
+        </article>
+        <article class="card ev reveal" data-ev="Wedding" data-start="20270210T180000" data-end="20270210T230000" data-venue="B">
+          <div class="ev-time">6:00 PM</div>
+          <h3>Wedding</h3>
+          <div class="meta">Dress code · SAMPLE: full traditional finery</div>
+          <p>SAMPLE — The pheras, the promises, and the bit we have been counting down to on this very page.</p>
+          <div class="acts">
+            <a class="btn solid" href="https://maps.app.goo.gl/m8nVF2Wo9VPgv9Qs6" target="_blank" rel="noopener">Directions</a>
+            <button class="btn ghost" data-cal>Add to calendar</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VENUES ================= -->
+<section id="venues">
+  <div class="wrap">
+    <div class="center reveal">
+      <p class="eyebrow">Where to be</p>
+      <h2 style="font-size:clamp(1.7rem,5vw,2.6rem);color:var(--brick)">The Venues</h2>
+    </div>
+    <div class="venues">
+      <div class="card venue reveal">
+        <svg class="pin" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+        <div class="hosts">Day One</div>
+        <h3>SAMPLE — Venue One</h3>
+        <p class="addr">SAMPLE address line one,<br>SAMPLE locality, City</p>
+        <p style="font-size:.86rem;color:var(--olive);font-weight:700;letter-spacing:.06em">Carnival 11:00 AM · Sangeet 5:00 PM</p>
+        <a class="btn solid" href="https://maps.app.goo.gl/otSrFEb36HX3Z8z1A" target="_blank" rel="noopener">Open in Maps</a>
+      </div>
+      <div class="card venue reveal">
+        <svg class="pin" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+        <div class="hosts">Day Two</div>
+        <h3>SAMPLE — Venue Two</h3>
+        <p class="addr">SAMPLE address line one,<br>SAMPLE locality, City</p>
+        <p style="font-size:.86rem;color:var(--olive);font-weight:700;letter-spacing:.06em">Mayra 10:00 AM · Baraat 4:00 PM · Wedding 6:00 PM</p>
+        <a class="btn solid" href="https://maps.app.goo.gl/m8nVF2Wo9VPgv9Qs6" target="_blank" rel="noopener">Open in Maps</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GALLERY ================= -->
+<section id="gallery">
+  <div class="wrap">
+    <div class="center reveal">
+      <p class="eyebrow">Before the big one</p>
+      <h2 style="font-size:clamp(1.7rem,5vw,2.6rem);color:var(--brick)">Moments</h2>
+      <p class="lede">SAMPLE placeholders — drop your photographs into a <code>photos/</code> folder and swap these tiles for <code>&lt;img&gt;</code> tags.</p>
+    </div>
+    <div class="gal" id="gal"></div>
+  </div>
+</section>
+
+<!-- ================= TRAVEL ================= -->
+<section id="travel">
+  <div class="wrap">
+    <div class="center reveal">
+      <p class="eyebrow">Getting here</p>
+      <h2 style="font-size:clamp(1.7rem,5vw,2.6rem);color:var(--brick)">Travel &amp; Stay</h2>
+    </div>
+    <div class="story" style="margin-top:2.2rem">
+      <div class="card reveal"><h3 style="color:var(--brick);font-size:1.15rem;margin-bottom:.4rem">Flying in</h3><p style="font-size:.93rem;color:var(--ink-soft);margin:0">SAMPLE — Nearest airport is roughly 40 minutes from both venues. Tell us your flight on the RSVP and we will arrange a pickup.</p></div>
+      <div class="card reveal"><h3 style="color:var(--brick);font-size:1.15rem;margin-bottom:.4rem">Where to stay</h3><p style="font-size:.93rem;color:var(--ink-soft);margin:0">SAMPLE — Rooms are blocked at two hotels near Venue Two under "Shah Wedding". Mention it when you book.</p></div>
+      <div class="card reveal"><h3 style="color:var(--brick);font-size:1.15rem;margin-bottom:.4rem">Getting around</h3><p style="font-size:.93rem;color:var(--ink-soft);margin:0">SAMPLE — Shuttles run between the hotels and both venues, starting 45 minutes before every function.</p></div>
+      <div class="card reveal"><h3 style="color:var(--brick);font-size:1.15rem;margin-bottom:.4rem">On gifts</h3><p style="font-size:.93rem;color:var(--ink-soft);margin:0">SAMPLE — Your presence is genuinely the whole thing. If you insist, blessings travel lighter than boxes.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= RSVP ================= -->
+<section id="rsvp">
+  <div class="wrap" style="max-width:720px">
+    <div class="center reveal">
+      <p class="eyebrow">Kindly respond by 10 January 2027</p>
+      <h2 style="font-size:clamp(1.7rem,5vw,2.6rem);color:var(--brick)">Will you be there?</h2>
+      <p class="lede">Fill this in and it opens a ready-made message in WhatsApp or your mail app. Nothing is sent anywhere until you hit send yourself.</p>
+    </div>
+    <form id="rsvp-form" class="reveal" novalidate>
+      <div class="row2">
+        <div><label for="g-name">Your name</label><input id="g-name" name="name" required placeholder="Name as we'd shout it across a room"></div>
+        <div><label for="g-count">How many of you</label>
+          <select id="g-count" name="count"><option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option></select>
+        </div>
+      </div>
+      <fieldset>
+        <label>Which functions?</label>
+        <div class="chips">
+          <label><input type="checkbox" name="fn" value="Carnival" checked><span>Carnival</span></label>
+          <label><input type="checkbox" name="fn" value="Sangeet" checked><span>Sangeet</span></label>
+          <label><input type="checkbox" name="fn" value="Mayra"><span>Mayra</span></label>
+          <label><input type="checkbox" name="fn" value="Baraat" checked><span>Baraat</span></label>
+          <label><input type="checkbox" name="fn" value="Wedding" checked><span>Wedding</span></label>
+        </div>
+      </fieldset>
+      <div><label for="g-note">Anything we should know</label><textarea id="g-note" name="note" placeholder="Food preferences, arrival time, the song you want played"></textarea></div>
+      <div class="acts" style="display:flex;gap:.6rem;flex-wrap:wrap">
+        <button type="button" class="btn solid" id="send-wa">Send on WhatsApp</button>
+        <button type="button" class="btn" id="send-mail">Send by email</button>
+      </div>
+      <p class="form-note">SAMPLE-CONTACT — replies go to +91 00000 00000 / rsvp@example.com. Replace both in the script below.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <svg style="width:38px;color:var(--marigold);margin:0 auto" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 0c1.1 6.2 5.7 10.8 12 12-6.3 1.2-10.9 5.8-12 12-1.1-6.2-5.7-10.8-12-12C6.3 10.8 10.9 6.2 12 0z"/></svg>
+    <p class="hash">#ADInfinity</p>
+    <p class="fine">Abhishek Shah &amp; Deshna (Diya) Shah · 10 February 2027</p>
+    <p class="fine" style="opacity:.65;margin-top:.8rem">With love, and a request to dance.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  /* ---- SAMPLE-CONTACT: replace these two ---- */
+  var RSVP_PHONE = "910000000000";          // country code + number, digits only
+  var RSVP_EMAIL = "rsvp@example.com";
+  /* ------------------------------------------ */
+
+  var WEDDING = new Date("2027-02-10T18:00:00+05:30");
+  var VENUES = {
+    A: {name:"SAMPLE — Venue One", map:"https://maps.app.goo.gl/otSrFEb36HX3Z8z1A"},
+    B: {name:"SAMPLE — Venue Two", map:"https://maps.app.goo.gl/m8nVF2Wo9VPgv9Qs6"}
+  };
+
+  /* ---------- sticky nav ---------- */
+  var nav = document.getElementById("nav");
+  addEventListener("scroll", function(){ nav.classList.toggle("stuck", scrollY > 24); }, {passive:true});
+
+  /* ---------- countdown ---------- */
+  var clock = document.getElementById("clock");
+  var cells = {};
+  clock.querySelectorAll("[data-k]").forEach(function(el){ cells[el.dataset.k] = el; });
+  function pad(n){ return n < 10 ? "0" + n : "" + n; }
+  function tick(){
+    var ms = WEDDING - new Date();
+    if (ms <= 0){ clock.innerHTML = '<div style="min-width:auto;padding:1.2rem 2rem"><b>Today</b><small>is the day</small></div>'; return; }
+    var s = Math.floor(ms/1000);
+    cells.d.textContent = Math.floor(s/86400);
+    cells.h.textContent = pad(Math.floor(s/3600)%24);
+    cells.m.textContent = pad(Math.floor(s/60)%60);
+    cells.s.textContent = pad(s%60);
+  }
+  tick(); setInterval(tick, 1000);
+
+  /* ---------- reveal on scroll ---------- */
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } });
+  }, {rootMargin:"0px 0px -8% 0px", threshold:.08});
+  document.querySelectorAll(".reveal").forEach(function(el, i){
+    el.style.transitionDelay = (i % 4) * 70 + "ms";
+    io.observe(el);
+  });
+
+  /* ---------- marigold buds along the garland ---------- */
+  var buds = document.getElementById("buds");
+  if (buds){
+    var path = buds.parentNode.querySelector("path"), L = path.getTotalLength();
+    for (var i = 1; i < 22; i++){
+      var p = path.getPointAtLength(L * i / 22);
+      var c = document.createElementNS("http://www.w3.org/2000/svg","circle");
+      c.setAttribute("cx", p.x); c.setAttribute("cy", p.y);
+      c.setAttribute("r", i % 3 === 0 ? 4.6 : 3.2);
+      c.setAttribute("fill", i % 4 === 0 ? "#9E3B21" : "#E39A12");
+      c.setAttribute("opacity", ".85");
+      buds.appendChild(c);
+    }
+  }
+
+  /* ---------- gallery placeholders ---------- */
+  var gal = document.getElementById("gal");
+  var flower = '<svg viewBox="0 0 24 24" aria-hidden="true"><g fill="currentColor"><circle cx="12" cy="5" r="3.4"/><circle cx="12" cy="19" r="3.4"/><circle cx="5" cy="12" r="3.4"/><circle cx="19" cy="12" r="3.4"/><circle cx="7" cy="7" r="3.1"/><circle cx="17" cy="7" r="3.1"/><circle cx="7" cy="17" r="3.1"/><circle cx="17" cy="17" r="3.1"/><circle cx="12" cy="12" r="3.6" opacity=".55"/></g></svg>';
+  ["Haldi","First trip","The proposal","Roka","Family","Engagement","Mehendi","Us"].forEach(function(cap){
+    var d = document.createElement("div");
+    d.className = "tile reveal"; d.innerHTML = flower + "<span>" + cap + "</span>";
+    gal.appendChild(d); io.observe(d);
+  });
+
+  /* ---------- add to calendar (.ics built in the browser) ---------- */
+  function icsStamp(raw){
+    var m = raw.match(/^(\d{4})(\d{2})(\d{2})T(\d{2})(\d{2})(\d{2})$/);
+    var d = new Date(m[1]+"-"+m[2]+"-"+m[3]+"T"+m[4]+":"+m[5]+":"+m[6]+"+05:30");
+    return d.toISOString().replace(/[-:]/g,"").replace(/\.\d{3}/,"");
+  }
+  document.querySelectorAll("[data-cal]").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var card = btn.closest(".ev"), v = VENUES[card.dataset.venue];
+      var ics = [
+        "BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//AD Infinity//EN","BEGIN:VEVENT",
+        "UID:" + card.dataset.ev.toLowerCase() + "-adinfinity-2027",
+        "DTSTAMP:" + icsStamp("20260101T000000"),
+        "DTSTART:" + icsStamp(card.dataset.start),
+        "DTEND:" + icsStamp(card.dataset.end),
+        "SUMMARY:" + card.dataset.ev + " — Abhishek & Deshna",
+        "LOCATION:" + v.name,
+        "DESCRIPTION:" + v.map,
+        "END:VEVENT","END:VCALENDAR"
+      ].join("\r\n");
+      var a = document.createElement("a");
+      a.href = URL.createObjectURL(new Blob([ics], {type:"text/calendar"}));
+      a.download = card.dataset.ev.toLowerCase() + "-abhishek-deshna.ics";
+      document.body.appendChild(a); a.click(); a.remove();
+      var old = btn.textContent; btn.textContent = "Saved ✓";
+      setTimeout(function(){ btn.textContent = old; }, 2200);
+    });
+  });
+
+  /* ---------- RSVP → WhatsApp / mail, composed locally ---------- */
+  function compose(){
+    var f = document.getElementById("rsvp-form");
+    var nameEl = document.getElementById("g-name");
+    var name = nameEl.value.trim();
+    if (!name){ nameEl.focus(); nameEl.style.borderColor = "#9E3B21"; return null; }
+    var fns = [].slice.call(f.querySelectorAll('[name=fn]:checked')).map(function(c){ return c.value; });
+    var note = document.getElementById("g-note").value.trim();
+    return "RSVP for Abhishek & Deshna\n"
+         + "Name: " + name + "\n"
+         + "Coming: " + document.getElementById("g-count").value + "\n"
+         + "Functions: " + (fns.length ? fns.join(", ") : "—")
+         + (note ? "\nNote: " + note : "");
+  }
+  document.getElementById("send-wa").addEventListener("click", function(){
+    var t = compose(); if (t) open("https://wa.me/" + RSVP_PHONE + "?text=" + encodeURIComponent(t), "_blank");
+  });
+  document.getElementById("send-mail").addEventListener("click", function(){
+    var t = compose(); if (t) location.href = "mailto:" + RSVP_EMAIL + "?subject=" + encodeURIComponent("RSVP — Abhishek & Deshna") + "&body=" + encodeURIComponent(t);
+  });
+
+  /* ---------- drifting marigold petals ---------- */
+  var calm = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function petal(left, dur){
+    var p = document.createElement("div");
+    p.className = "petal";
+    var size = 8 + Math.random()*10;
+    p.style.left = left + "vw";
+    p.style.width = p.style.height = size + "px";
+    p.style.animationDuration = dur + "s";
+    p.style.background = Math.random() > .35 ? "#E39A12" : "#C9762A";
+    p.style.borderRadius = "60% 40% 55% 45% / 50% 60% 40% 50%";
+    document.body.appendChild(p);
+    setTimeout(function(){ p.remove(); }, dur * 1000 + 500);
+  }
+  if (!calm){
+    setInterval(function(){
+      if (document.hidden || document.querySelectorAll(".petal").length > 8) return;
+      petal(Math.random()*100, 11 + Math.random()*9);
+    }, 2600);
+  }
+
+  /* ---------- scratch card ---------- */
+  var coins = [].slice.call(document.querySelectorAll(".coin"));
+  var scratchMsg = document.getElementById("scratch-msg");
+  var scratchSkip = document.getElementById("scratch-skip");
+  var serif = getComputedStyle(document.documentElement).getPropertyValue("--serif");
+  var star = new Path2D("M12 0c1.1 6.2 5.7 10.8 12 12-6.3 1.2-10.9 5.8-12 12-1.1-6.2-5.7-10.8-12-12C6.3 10.8 10.9 6.2 12 0z");
+  var revealed = 0;
+
+  function allRevealed(){
+    scratchMsg.classList.add("show");
+    scratchSkip.hidden = true;
+    if (calm) return;
+    for (var i = 0; i < 22; i++){
+      (function(i){ setTimeout(function(){ petal(20 + Math.random()*60, 5 + Math.random()*4); }, i * 60); })(i);
+    }
+  }
+
+  coins.forEach(function(coin){
+    var cv = coin.querySelector("canvas"), ctx = cv.getContext("2d");
+    var touched = false, done = false, drawing = false, last = null, moves = 0;
+
+    function paint(){
+      var r = cv.getBoundingClientRect(), w = r.width, h = r.height;
+      var dpr = Math.min(window.devicePixelRatio || 1, 2);
+      cv.width = Math.round(w * dpr); cv.height = Math.round(h * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      ctx.globalCompositeOperation = "source-over";
+      var g = ctx.createRadialGradient(w*.35, h*.3, w*.05, w*.5, h*.5, w*.72);
+      g.addColorStop(0, "#F6C766"); g.addColorStop(.55, "#E39A12"); g.addColorStop(1, "#B8563A");
+      ctx.fillStyle = g; ctx.fillRect(0, 0, w, h);
+      for (var i = 0; i < 160; i++){
+        ctx.fillStyle = "rgba(255,255,255," + (Math.random() * .28).toFixed(2) + ")";
+        ctx.fillRect(Math.random()*w, Math.random()*h, 1.3, 1.3);
+      }
+      ctx.strokeStyle = "rgba(251,245,236,.6)"; ctx.lineWidth = 1.5; ctx.setLineDash([3, 5]);
+      ctx.beginPath(); ctx.arc(w/2, h/2, w/2 - 9, 0, Math.PI*2); ctx.stroke(); ctx.setLineDash([]);
+      var s = w * .1;
+      ctx.save(); ctx.translate(w/2 - s, h*.36 - s); ctx.scale(s/12, s/12);
+      ctx.fillStyle = "#FBF5EC"; ctx.fill(star); ctx.restore();
+      ctx.fillStyle = "#FBF5EC"; ctx.textAlign = "center"; ctx.textBaseline = "middle";
+      ctx.font = "italic 600 " + Math.round(w * .13) + "px " + serif;
+      ctx.fillText("Scratch", w/2, h*.62);
+      ctx.globalCompositeOperation = "destination-out";
+      ctx.lineCap = ctx.lineJoin = "round"; ctx.lineWidth = w * .2;
+    }
+
+    function at(e){ var r = cv.getBoundingClientRect(); return {x:e.clientX - r.left, y:e.clientY - r.top}; }
+
+    // share of the visible circle that has been scratched away
+    function check(){
+      var W = cv.width, H = cv.height, R = W/2, step = Math.max(3, W/60 | 0);
+      var d = ctx.getImageData(0, 0, W, H).data, n = 0, clear = 0;
+      for (var y = 0; y < H; y += step) for (var x = 0; x < W; x += step){
+        var dx = x - W/2, dy = y - H/2;
+        if (dx*dx + dy*dy > R*R) continue;
+        n++; if (d[(y*W + x)*4 + 3] < 128) clear++;
+      }
+      if (n && clear / n > .55) finish();
+    }
+
+    function finish(){
+      if (done) return;
+      done = true; drawing = false; coin.classList.add("done");
+      if (++revealed === coins.length) allRevealed();
+    }
+    coin.reveal = finish;
+
+    cv.addEventListener("pointerdown", function(e){
+      if (done) return;
+      e.preventDefault();
+      drawing = touched = true; last = at(e);
+      try { cv.setPointerCapture(e.pointerId); } catch (_) {}
+      ctx.beginPath(); ctx.arc(last.x, last.y, ctx.lineWidth/2, 0, Math.PI*2); ctx.fill();
+    });
+    cv.addEventListener("pointermove", function(e){
+      if (!drawing) return;
+      var p = at(e);
+      ctx.beginPath(); ctx.moveTo(last.x, last.y); ctx.lineTo(p.x, p.y); ctx.stroke();
+      last = p;
+      if (++moves % 6 === 0) check();
+    });
+    ["pointerup","pointercancel"].forEach(function(t){
+      cv.addEventListener(t, function(){ if (drawing){ drawing = false; check(); } });
+    });
+    addEventListener("resize", function(){ if (!touched && !done) paint(); });
+    paint();
+  });
+
+  scratchSkip.addEventListener("click", function(){ coins.forEach(function(c){ c.reveal(); }); });
+})();
+</script>
+</body>
+</html>
